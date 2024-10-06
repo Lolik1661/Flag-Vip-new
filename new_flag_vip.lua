@@ -2704,13 +2704,13 @@ gg.clearList()
 end
 
 function func1func3()
-    gg.clearResults()
-    gg.clearList()
+    local currentTime = os.date("%H:%M:%S")
+    local currentDate = os.date("%A, %d %B %Y")
     nick = gg.choice({
         "Длинный ник〘💡〙",
         "Цвет ника〘🎨 〙",
-        "Назад〘⛔〙"
-    })
+        "Назад〘⛔〙",
+         },nil,"〘⚙️〙━──━❪𝙁𝙇𝘼𝙂 𝙎𝘾𝙍𝙄𝙋𝙏❫━──━〘⚙️〙" .. "\n" .. "🌐Дата: " .. currentDate .. "\n" .. "⌚Время: " .. currentTime .. "\n" .. "💾Разработчик: FLAG ")
 
     if nick == 1 then func1func3func1() end
     if nick == 2 then func1func3func2() end
@@ -2988,7 +2988,7 @@ function func2func20()
             " ➤ламба SVJ🪃",
             " ➤ламба хуракан🚀 ",
             " ➤ламба венто🪢",
-            " ➤EXIT📛",
+            " ➤exit📛",
                 },nil,"〘⚙️〙━──━❪𝙁𝙇𝘼𝙂 𝙎𝘾𝙍𝙄𝙋𝙏❫━──━〘⚙️〙" .. "\n" .. "🌐Дата: " .. currentDate .. "\n" .. "⌚Время: " .. currentTime .. "\n" .. "💾Разработчик: FLAG ")
         if DFG == 1 then func2func20func1() end
         if DFG == 2 then func2func20func2() end
@@ -3002,31 +3002,23 @@ function func2func20()
     function func2func20func6()
     gg.clearResults()
 gg.clearList()
-    local Lib = gg.getRangesList("libil2cpp.so")
-gg.setValues({
-  [1] = {
-    ["flags"] = 4,
-    ["address"] = Lib[2]["start"] + 96090224,
-    ["value"] = 68
-  }
-})
-gg.alert("Долистай до 87 машины и купи ее🌴 ")
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("134", gg.TYPE_DWORD) 
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("68", gg.TYPE_DWORD)
+gg.alert("Долистай до 89 машины и купи ее🌴 ")
 gg.clearResults()
 gg.clearList()
 end
     
     function func2func20func1()
-gg.clearResults()
+    gg.clearResults()
 gg.clearList()
-local Lib = gg.getRangesList("libil2cpp.so")
-gg.setValues({
-  [1] = {
-    ["flags"] = 4,
-    ["address"] = Lib[2]["start"] + 96090224,
-    ["value"] = 66
-  }
-})
-gg.alert("Долистай до 87 машины и купи ее🌴 ")
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("134", gg.TYPE_DWORD) 
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("66", gg.TYPE_DWORD)
+gg.alert("Долистай до 89 машины и купи ее🌴 ")
 gg.clearResults()
 gg.clearList()
 end
@@ -3034,15 +3026,11 @@ end
 function func2func20func2()
 gg.clearResults()
 gg.clearList()
-local Lib = gg.getRangesList("libil2cpp.so")
-gg.setValues({
-  [1] = {
-    ["flags"] = 4,
-    ["address"] = Lib[2]["start"] + 96090224,
-    ["value"] = 293
-  }
-})
-gg.alert("Долистай до 87 машины и купи ее🌴 ")
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("134", gg.TYPE_DWORD) 
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("293", gg.TYPE_DWORD)
+gg.alert("Долистай до 89 машины и купи ее🌴 ")
 gg.clearResults()
 gg.clearList()
 end
@@ -3050,15 +3038,11 @@ end
 function func2func20func3()
 gg.clearResults()
 gg.clearList()
-local Lib = gg.getRangesList("libil2cpp.so")
-gg.setValues({
-  [1] = {
-    ["flags"] = 4,
-    ["address"] = Lib[2]["start"] + 96090224,
-    ["value"] = 101
-  }
-})
-gg.alert("Долистай до 87 машины и купи ее🌴 ")
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("134", gg.TYPE_DWORD) 
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("101", gg.TYPE_DWORD)
+gg.alert("Долистай до 89 машины и купи ее🌴 ")
 gg.clearResults()
 gg.clearList()
 end
@@ -3066,15 +3050,11 @@ end
 function func2func20func4()
 gg.clearResults()
 gg.clearList()
-local Lib = gg.getRangesList("libil2cpp.so")
-gg.setValues({
-  [1] = {
-    ["flags"] = 4,
-    ["address"] = Lib[2]["start"] + 96090224,
-    ["value"] = 345
-  }
-})
-gg.alert("Долистай до 87 машины и купи ее🌴 ")
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("134", gg.TYPE_DWORD) 
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("345", gg.TYPE_DWORD)
+gg.alert("Долистай до 89 машины и купи ее🌴 ")
 gg.clearResults()
 gg.clearList()
 end
@@ -3082,15 +3062,11 @@ end
 function func2func20func5()
 gg.clearResults()
 gg.clearList()
-local Lib = gg.getRangesList("libil2cpp.so")
-gg.setValues({
-  [1] = {
-    ["flags"] = 4,
-    ["address"] = Lib[2]["start"] + 96090224,
-    ["value"] = 25
-  }
-})
-gg.alert("Долистай до 87 машины и купи ее🌴 ")
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("134", gg.TYPE_DWORD) 
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("68", gg.TYPE_DWORD)
+gg.alert("Долистай до 25 машины и купи ее🌴 ")
 gg.clearResults()
 gg.clearList()
 end
