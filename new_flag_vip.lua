@@ -1,4 +1,4 @@
-gg.clearResults()
+ gg.clearResults()
 gg.clearList()
 gg.toast ('[■□□□□□□□□□] [10%] ')
 gg.sleep (450)
@@ -143,6 +143,10 @@ EM = gg.choice({
 " ╭Топ винил" .. "\n" .. " ╰➤Free Vinil🚕",
 " ╭Драг меню" .. "\n" .. " ╰➤Drug Menu🏎️",
 " ╭Вернуть ламбы" .. "\n" .. " ╰➤Unlock Lamborghini📎",
+" ╭прижим к дороге" .. "\n" .. " ╰➤pressure to the road🕹️", -- прижим к дороге 
+" ╭Анти занос" .. "\n" .. " ╰➤anti skid⛸️", -- анти занос
+" ╭Выворот колёс" .. "\n" .. " ╰➤wheel inversion🛟", -- выворт
+" ╭Телепорт вперёд" .. "\n" .. " ╰➤402m🏁", -- телепорт
 " ╭Назад" .. "\n" .. " ╰➤BACK📛",
 },nil,"〘⚙️〙━──━❪𝙁𝙇𝘼𝙂 𝙎𝘾𝙍𝙄𝙋𝙏❫━──━〘⚙️〙" .. "\n" .. "🌐Дата: " .. currentDate .. "\n" .. "⌚Время: " .. currentTime .. "\n" .. "💾Разработчик: FLAG ")
 if EM == 1 then func2func0() end
@@ -166,7 +170,136 @@ if EM == 18 then func2func17() end -- клаксон
 if EM == 19 then func2func18() end -- топ винилл
 if EM == 20 then func2func19() end -- драг меню
 if EM == 21 then func2func20() end -- вернуть ламбы
-if EM == 22 then HOME() end
+if EM == 22 then func2func21() end
+if EM == 23 then func2func22() end
+if EM == 24 then func2func23() end
+if EM == 25 then func2func24() end
+if EM == 26 then HOME() end
+end
+
+function func2func21()
+local currentTime = os.date("%H:%M:%S")
+local currentDate = os.date("%A, %d %B %Y")
+HHM = gg.choice({
+" ╭прижим к дороге" .. "\n" .. " ╰➤Включить✅", -- прижим к дороге 
+" ╭прижим к дороге" .. "\n" .. " ╰➤Выключить❌", -- прижим к дороге 
+" ╭Назад" .. "\n" .. " ╰➤BACK📛",
+},nil,"〘⚙️〙━──━❪𝙁𝙇𝘼𝙂 𝙎𝘾𝙍𝙄𝙋𝙏❫━──━〘⚙️〙" .. "\n" .. "🌐Дата: " .. currentDate .. "\n" .. "⌚Время: " .. currentTime .. "\n" .. "💾Разработчик: FLAG ")
+if HHM == 1 then func2func21func1() end
+if HHM == 2 then func2func21func2() end
+if HHM == 3 then HOME() end
+end
+
+function func2func21func2()
+gg.clearResults()
+gg.clearList()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("8.37547969818", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1", gg.TYPE_FLOAT)
+revert = gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.processResume()
+gg.alert ('Готово〘🌐〙')
+gg.clearResults()
+gg.clearList()
+end
+
+function func2func21func1()
+gg.clearResults()
+gg.clearList()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("17 170 432D; 0D; 0D; 1F; -1D")
+revert = gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.refineNumber("1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("8.37547969818", gg.TYPE_FLOAT)
+revert = gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.processResume()
+gg.alert ('Готово〘🌐〙')
+gg.clearResults()
+gg.clearList()
+end
+
+function func2func22()
+local currentTime = os.date("%H:%M:%S")
+local currentDate = os.date("%A, %d %B %Y")
+HHHM = gg.choice({
+" ╭Анти занос" .. "\n" .. " ╰➤Включить✅", -- анти занос
+" ╭Анти занос" .. "\n" .. " ╰➤Выключить❌", -- анти занос
+" ╭Назад" .. "\n" .. " ╰➤BACK📛",
+},nil,"〘⚙️〙━──━❪𝙁𝙇𝘼𝙂 𝙎𝘾𝙍𝙄𝙋𝙏❫━──━〘⚙️〙" .. "\n" .. "🌐Дата: " .. currentDate .. "\n" .. "⌚Время: " .. currentTime .. "\n" .. "💾Разработчик: FLAG ")
+if HHHM == 1 then func2func22func1() end
+if HHHM == 2 then func2func22func2() end
+if HHHM == 3 then HOME() end
+end
+
+function func2func22func1()
+gg.clearResults()
+gg.clearList()
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("10000000", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+revert = gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll(" 0.00012 ", gg.TYPE_FLOAT)
+gg.alert("Функция успешно выполнена〘🌐〙")
+gg.processResume()
+gg.clearResults()
+gg.clearList()
+end
+
+function func2func22func2()
+gg.clearResults()
+gg.clearList()
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber(" 0.00012 ", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+revert = gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("10000000", gg.TYPE_FLOAT)
+gg.alert("Функция успешно выполнена〘🌐〙")
+gg.processResume()
+gg.clearResults()
+gg.clearList()
+end
+
+function func2func23()
+gg.clearResults()
+gg.clearList()
+gg.alert ('〘⏲️〙Поставьте выворот колёс на минимум, функция начнётся через 5 секунд.〘⏲️〙')
+gg.sleep (5000)
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("30", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.alert ('〘⏲️〙Поставьте выворот колёс на максимум, функция продолжится через 5 секунд.〘⏲️〙')
+gg.sleep (5000)
+gg.refineNumber("60", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+viv = gg.prompt({"🌐Выбери выворот колёс, 360 - это полный оборот.💾 [-360;360]"}, {0, false}, {"number"})
+vivi = viv[1]
+gg.editAll(vivi, gg.TYPE_FLOAT)
+gg.processResume()
+gg.alert ('〘💾〙Нажми "сохранить" в подвеске.〘💾〙')
+gg.clearResults() 
+gg.clearResults()
+gg.clearList()
+end
+
+function func2func24()
+gg.clearResults()
+gg.clearList()
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("500", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-99 999.0", gg.TYPE_FLOAT)
+gg.processResume()
+gg.sleep (700)
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("-99 999.0", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("500", gg.TYPE_FLOAT)
+gg.processResume()
+gg.alert("Функция успешно выполнена!🌐")
+gg.clearResults()
+gg.clearList()
 end
 
 function func3()
