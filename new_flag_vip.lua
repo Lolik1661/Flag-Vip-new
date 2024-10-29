@@ -1,4 +1,4 @@
- gg.clearResults()
+gg.clearResults()
 gg.clearList()
 gg.toast ('[■□□□□□□□□□] [10%] ')
 gg.sleep (450)
@@ -147,6 +147,7 @@ EM = gg.choice({
 " ╭Анти занос" .. "\n" .. " ╰➤anti skid⛸️", -- анти занос
 " ╭Выворот колёс" .. "\n" .. " ╰➤wheel inversion🛟", -- выворт
 " ╭Телепорт вперёд" .. "\n" .. " ╰➤402m🏁", -- телепорт
+" ╭Анти дамаг мотора" .. "\n" .. " ╰➤Anti damage engine🛠️",
 " ╭Назад" .. "\n" .. " ╰➤BACK📛",
 },nil,"〘⚙️〙━──━❪𝙁𝙇𝘼𝙂 𝙎𝘾𝙍𝙄𝙋𝙏❫━──━〘⚙️〙" .. "\n" .. "🌐Дата: " .. currentDate .. "\n" .. "⌚Время: " .. currentTime .. "\n" .. "💾Разработчик: FLAG ")
 if EM == 1 then func2func0() end
@@ -174,7 +175,8 @@ if EM == 22 then func2func21() end
 if EM == 23 then func2func22() end
 if EM == 24 then func2func23() end
 if EM == 25 then func2func24() end
-if EM == 26 then HOME() end
+if EM == 26 then func2func25() end
+if EM == 27 then HOME() end
 end
 
 function func2func21()
@@ -706,7 +708,7 @@ local currentTime = os.date("%H:%M:%S")
         local currentDate = os.date("%A, %d %B %Y")
 QPI = gg.choice({
 " ╭Накрутить 30k" .. "\n" .. " ╰➤Коины🪙",
-" ╭Накрутить 500k" .. "\n" .. " ╰➤Коины🪙",
+" ╭Накрутить 50k" .. "\n" .. " ╰➤Коины🪙",
 " ╭Накрутка коинов" .. "\n" .. " ╰➤Анимации🪙",
 " ╭Скрутить коины" .. "\n" .. " ╰➤Анимации🪙",
 " ╭Скрутить коины" .. "\n" .. " ╰➤Мгновенно🪙",
@@ -736,17 +738,25 @@ gg.clearList()
 	local Lib = gg.getRangesList("libil2cpp.so")
 	gg.setValues({
 	  [1] = {
-	    ["flags"] = 16,
-	    ["address"] = Lib[2]["start"] + 0x211EEB4,
-	    ["value"] = -3.06335187e11
+	    ["flags"] = 4,
+	    ["address"] = Lib[2]["start"] + 0x3121844,
+	    ["value"] = 1385080320
 	  }
 	})
 	local Lib = gg.getRangesList("libil2cpp.so")
 	gg.setValues({
 	  [1] = {
-	    ["flags"] = 16,
-	    ["address"] = Lib[2]["start"] + 0x211EEB8,
-	    ["value"] = -6.13017998e13
+	    ["flags"] = 4,
+	    ["address"] = Lib[2]["start"] + 0x3121848,
+	    ["value"] = 1923088384
+	  }
+	})
+	local Lib = gg.getRangesList("libil2cpp.so")
+	gg.setValues({
+	  [1] = {
+	    ["flags"] = 4,
+	    ["address"] = Lib[2]["start"] + 0x312184C,
+	    ["value"] = -698416192
 	  }
 	})
 gg.clearResults()
@@ -816,47 +826,31 @@ end
 function func1func1func2() -- 30Ðº
 gg.clearResults()
 gg.clearList()
-	local Lib = gg.getRangesList("libil2cpp.so")
-	gg.setValues({
-	  [1] = {
-	    ["flags"] = 16,
-	    ["address"] = Lib[2]["start"] + 0x211EEB4,
-	    ["value"] = -3.77822904e11
-	  }
-	})
-	local Lib = gg.getRangesList("libil2cpp.so")
-	gg.setValues({
-	  [1] = {
-	    ["flags"] = 16,
-	    ["address"] = Lib[2]["start"] + 0x211EEB8,
-	    ["value"] = -6.13017998e13
-	  }
-	})
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("-6268641294084581378;-1152321765423099916;4136145765435308851:17", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("-6268641294084581378;-1152321765423099916:17", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+revert = gg.getResults(300, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-2999674700104292864;-7998318180707662912", gg.TYPE_QWORD)
+gg.toast("Нажми на баланс коинов⚙️")
+gg.processResume()
 gg.clearResults()
 gg.clearList()
-gg.toast("Нажми на баланс коинов🪙") 
 end
 
 function func1func4()
-	local Lib = gg.getRangesList("libil2cpp.so")
-
-	gg.setValues({
-
-	  [1] = {
-	    ["flags"] = 16,
-	    ["address"] = Lib[2]["start"] + 36031488,
-	    ["value"] = -274878956000.0
-	  }
-	})
-	local Lib = gg.getRangesList("libil2cpp.so")
-	gg.setValues({
-	  [1] = {
-	    ["flags"] = 16,
-	    ["address"] = Lib[2]["start"] + 36031492,
-	    ["value"] = -61301799800000.0
-	  }
-	}) 
-	gg.toast("Обнови лобби🌴")
+gg.clearResults()
+gg.clearList()
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("-6268641294084581378;-3458186627430395916;4136031416226024853:9", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("-6268641294084581378;-3458186627430395916:9", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+revert = gg.getResults(300, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-2999674700105252832;-6268311401192815680", gg.TYPE_QWORD)
+gg.toast("Обнови лобби⚙️")
+gg.processResume()
+gg.clearResults()
+gg.clearList()
 end
 
 function D5()
@@ -2053,178 +2047,185 @@ gg.clearList()
 end
 
 function func2func8()
-local currentTime = os.date("%H:%M:%S")
+        active = 0
+        local currentTime = os.date("%H:%M:%S")
         local currentDate = os.date("%A, %d %B %Y")
-minels = gg.choice({
-	" ╭Пулька" .. "\n" .. " ╰➤414lS🛻",
-    " ╭Пулька" .. "\n" .. " ╰➤666lS🚙",
-    " ╭Пулька" .. "\n" .. " ╰➤777lS🚘",
-    " ╭Дэфолт" .. "\n" .. " ╰➤1695lS🚤",
-    " ╭Дэфолт+" .. "\n" .. " ╰➤2000lS🏎️",
-    " ╭Чит тачка" .. "\n" .. " ╰➤Чит+🚗",
-    " ╭Выбор лс" .. "\n" .. " ╰➤Кастом🌋",
-    " ╭Спорт кпп" .. "\n" .. " ╰➤Супер коробка🪵",
-    " ╭Назад" .. "\n" .. " ╰➤Выход📛"
-            },nil,"〘⚙️〙━──━❪𝙁𝙇𝘼𝙂 𝙎𝘾𝙍𝙄𝙋𝙏❫━──━〘⚙️〙" .. "\n" .. "🌐Дата: " .. currentDate .. "\n" .. "⌚Время: " .. currentTime .. "\n" .. "💾Разработчик: FLAG ")
-	
-if minels == 1 then func2func8func1() end
-if minels == 2 then func2func8func2() end
-if minels == 3 then func2func8func3() end
-if minels == 4 then func2func8func4() end
-if minels == 5 then func2func8func5() end
-if minels == 6 then func2func8func6() end
-if minels == 7 then func2func8func7() end
-if minels == 8 then func2func8func8() end
-if minels == 9 then HOME() end
+        QM = gg.choice({
+            " ╭300 hp" .. "\n" .. " ╰➤Полу - чит🌐",
+            " ╭414 hp" .. "\n" .. " ╰➤Полу - чит⚙️",
+            " ╭660 hp" .. "\n" .. " ╰➤Полу - чит🔗",
+            " ╭800 hp" .. "\n" .. " ╰➤Магистраль настройка📝",
+            " ╭Быстрая коробка" .. "\n" .. " ╰➤Fast gearbox⏳",
+            " ╭1695 hp" .. "\n" .. " ╰➤Обычная настройка🛠️",
+            " ╭Выход" .. "\n" .. " ╰➤Exit📛",
+        },nil,"〘⚙️〙━──━❪𝙁𝙇𝘼𝙂 𝙎𝘾𝙍𝙄𝙋𝙏❫━──━〘⚙️〙" .. "\n" .. "🌐Дата: " .. currentDate .. "\n" .. "⌚Время: " .. currentTime .. "\n" .. "💾Разработчик: FLAG ")
+        if QM == 1 then func2func8func1() end
+        if QM == 2 then func2func8func2() end
+        if QM == 3 then func2func8func3() end
+        if QM == 4 then func2func8func4() end
+        if QM == 5 then func2func8func5() end
+        if QM == 6 then func2func8func6() end
+        if QM == 7 then HOME() end
+    end
+    
+    function func2func8func6()
+gg.alert("🛠️Купи мотор V6.3.5🛠️")
+gg.sleep (7000)
+gg.clearResults()
+gg.clearList()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("280", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1695", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("350", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("2254", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("6300", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("7000", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("4700", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("3500", gg.TYPE_FLOAT)
+gg.processResume()
+gg.alert("Нажми кнопку SET⚙️")
+end
+    
+    function func2func8func1()
+gg.alert("🛠️Купи мотор V6.3.5🛠️")
+gg.sleep (7000)
+gg.clearResults()
+gg.clearList()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("280", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("300", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("350", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("2300", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("6300", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("8000", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("4700", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("7997", gg.TYPE_FLOAT)
+gg.processResume()
+gg.alert("Нажми кнопку SET⚙️")
 end
 
-function func2func8func8()
+function func2func8func2()
+gg.alert("🛠️Купи мотор V6.3.5🛠️")
+gg.sleep (7000)
 gg.clearResults()
 gg.clearList()
-gg.alert("〘🌊〙Для начала купи fast gearboks в тюнинге машины, у тебя на это есть пару секунд〘🌊〙") 
-gg.sleep(7000)
-gg.clearResults()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.searchNumber("0.1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("-0.001", gg.TYPE_FLOAT)
-gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("280", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("414", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("350", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("2300", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("6300", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("8000", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("4700", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("7500", gg.TYPE_FLOAT)
+gg.processResume()
+gg.alert("Нажми кнопку SET⚙️")
+end
+
+function func2func8func3()
+gg.alert("🛠️Купи мотор V6.3.5, потом зайди в другое и купи TWIN TURBO🏁")
+gg.sleep (7000)
 gg.clearResults()
 gg.clearList()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("280", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("550", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("350", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1000", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("6300", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1600", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("4700", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1423", gg.TYPE_FLOAT)
+gg.processResume()
+gg.alert("Нажми кнопку SET⚙️")
+end
+
+function func2func8func4()
+gg.alert("🛠️Купи мотор V6.3.0🛠️")
+gg.sleep (7000)
+gg.clearResults()
+gg.clearList()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("240", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("800", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("310", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("2900", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("6800", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("8000", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("4500", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("7990", gg.TYPE_FLOAT)
+gg.processResume()
+gg.alert("Нажми кнопку SET⚙️")
 end
 
 function func2func8func5()
 gg.clearResults()
 gg.clearList()
+gg.alert("🛠️Купи fast gearboks в тюнинге машины, у тебя на это есть пару секунд🛠️") 
+gg.sleep(7000)
+gg.clearResults()
 gg.setRanges(gg.REGION_CODE_APP)
-     gg.searchNumber("240", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.processResume()
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("2000", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber("310", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("2254", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber("6800", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("7000", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber("4500", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("4899", gg.TYPE_FLOAT)
-gg.processResume()
-gg.alert("КУПИ МОТОР V6.3.0 / Пᴇᴩᴇɜᴀᴨуᴄᴛи иᴦᴩу!")
-end
-
-function func2func8func4()
-gg.clearResults()
-gg.clearList()
-gg.setRanges(gg.REGION_CODE_APP)
-     gg.searchNumber("240", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.processResume()
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1695", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber("310", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("2254", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber("6800", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("7000", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber("4500", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("4899", gg.TYPE_FLOAT)
-gg.processResume()
-gg.alert("КУПИ МОТОР V6.3.0 / Пᴇᴩᴇɜᴀᴨуᴄᴛи иᴦᴩу!")
-end
-
-function func2func8func3()
-gg.clearResults()
-gg.clearList()
-gg.setRanges(gg.REGION_CODE_APP)
-     gg.searchNumber("240", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.processResume()
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("777", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber("310", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("2300", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber("6800", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("8000", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber("4500", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("7899", gg.TYPE_FLOAT)
-gg.processResume()
-gg.alert("КУПИ МОТОР V6.3.0 / Пᴇᴩᴇɜᴀᴨуᴄᴛи иᴦᴩу!")
-end
-
-function func2func8func2()
-gg.clearResults()
-gg.clearList()
-gg.setRanges(gg.REGION_CODE_APP)
-     gg.searchNumber("240", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.processResume()
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("666", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber("310", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("2300", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber("6800", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("8000", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber("4500", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("7899", gg.TYPE_FLOAT)
-gg.processResume()
-gg.alert("КУПИ МОТОР V6.3.0 / Пᴇᴩᴇɜᴀᴨуᴄᴛи иᴦᴩу!")
-end
-
-function func2func8func1()
-gg.clearResults()
-gg.clearList()
-gg.setRanges(gg.REGION_CODE_APP)
-     gg.searchNumber("240", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.processResume()
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("414", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber("310", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("2300", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber("6800", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("8000", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber("4500", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("7899", gg.TYPE_FLOAT)
-gg.processResume()
-gg.alert("КУПИ МОТОР V6.3.0 / Пᴇᴩᴇɜᴀᴨуᴄᴛи иᴦᴩу!")
-end
-
-function func2func8func7() 
-gg.clearResults()
-gg.clearList()
-gg.setRanges(gg.REGION_ANONYMOUS) 
-HP1 = gg.prompt({"введи лс"}, {0, false}, {"number"})
-HPH = HP1[1]
-gg.searchNumber(HPH, gg.TYPE_FLOAT)
+gg.searchNumber("0.1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
 revert = gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
-HP2 = gg.prompt({"введи лс которые нужно получить"}, {0, false}, {"number"})
-HPJ = HP2[1]
-gg.editAll(HPJ, gg.TYPE_FLOAT)
+gg.editAll("0.00000000000000001", gg.TYPE_FLOAT)
+gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.processResume()
+gg.clearResults()
+gg.clearList()
+gg.alert("🛠️Ещё раз купи fast gearboks🛠️") 
+end
+
+function func2func8func6() 
+gg.clearResults()
+gg.clearList()
+gg.alert("🛠️Купи мотор V6.3.0🛠️")
+gg.sleep (7000)
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("240", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+HP1 = gg.prompt({"Введи желаемые лс"}, {0, false}, {"number"})
+HPH = HP1[1]
+gg.editAll(HPH, gg.TYPE_FLOAT)
 gg.processResume()
 gg.clearResults() 
 gg.setRanges(gg.REGION_ANONYMOUS) 
@@ -2239,43 +2240,6 @@ gg.processResume()
 gg.clearResults() 
 gg.sleep (300)
 gg.alert ('〘✳️〙нажми на кнопку "купить"〘✳️〙') 
-gg.sleep(700)
-gg.toast('Гᴏᴛᴏʙᴏ 〘✳️〙')
-gg.sleep (300)
-gg.clearResults()
-gg.clearList()
-end
-
-function func2func8func6() 
-gg.clearResults()
-gg.clearList()
-gg.sleep (300)
-gg.alert ('〘✳️〙функция работает не на всех машинах〘✳️〙') 
-gg.sleep (300)
-gg.alert ('〘✳️〙зделай 2 раза сброс в тюнинге, а после купи самый первый двигатель〘✳️〙') 
- gg.setRanges(gg.REGION_ANONYMOUS) 
-gg.searchNumber("150", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1233", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber("220", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1300", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber("5900", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1255", gg.TYPE_FLOAT)
-gg.clearResults()
-gg.searchNumber("4100", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1333", gg.TYPE_FLOAT)
-gg.clearResults()
- gg.setRanges(gg.REGION_ANONYMOUS) 
-gg.searchNumber("150", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("1233", gg.TYPE_FLOAT)
-gg.sleep (300)
-gg.alert ('〘✳️〙теперь снова сделай 2 раза сброс в тюнинге и потом купи самый первый двигатель〘✳️〙') 
 gg.sleep(700)
 gg.toast('Гᴏᴛᴏʙᴏ 〘✳️〙')
 gg.sleep (300)
@@ -3305,6 +3269,24 @@ revert = gg.getResults(500, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("-2999674700105252640;-7775187538689457216", gg.TYPE_QWORD)
 gg.alert("Зайди в онлайн игру и посмотри на ранг〘🌍〙")
 gg.processResume()
+gg.clearResults()
+gg.clearList()
+end
+
+function func2func25()
+gg.clearResults()
+gg.clearList()
+gg.clearResults()
+gg.clearList()
+gg.setRanges(32)
+gg.searchNumber("0.40000000596F;5;0.10000000149F;1:13", 16)
+gg.refineNumber("5", 16)
+gg.getResults(9999)
+gg.editAll("1999", 16)
+gg.alert("Готово🛠️")
+gg.processResume()
+gg.clearResults()
+gg.clearList()
 end
 
 function exit()
