@@ -1890,145 +1890,105 @@ gg.clearList()
 end
 
 function func2func10()
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("-6268632489401688066;-6268359819120257034;4143010840624362038:17", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("-6268632489401688066;-6268359819120257034:17", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+revert = gg.getResults(300, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-2999674700105252864;-6268359818359143488", gg.TYPE_QWORD)
+gg.processResume()
 gg.clearResults()
 gg.clearList()
-gg.alert ('Этап "1". Зайди на цивик, и выбери второй бампер. У тебя на это есть 20 секунд ') 
-for i = 20, 0, -1 do
-gg.toast ("Осталось: " .. i .. " сек")
-gg.sleep(1000)
-end
-gg.sleep (1000)
-gg.toast ("Начали")
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("1", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.sleep(700)
-gg.alert ('2 этап - перейди на третий бампер и ожидай надписи "3 этап"') 
-gg.sleep(9000) 
-gg.refineNumber("2", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.sleep(700)
-gg.alert ('3 этап - перейди на четвëртый бампер и ожидай надписи "4 этап"') 
-gg.sleep(5000) 
-gg.refineNumber("3", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.sleep(700)
-gg.alert ('4 этап - перейди на нужную машину и выбери последний бампер,у тебя на это есть 20 секунд. Потом ожидай надписи " успешно". После купи этот бампер и выйди из тюнинга, после этого перейди на любую другую машину и вернись обратно на свою') 
-for i = 20, 0, -1 do
-gg.toast ("Осталось: " .. i .. " сек")
-gg.sleep(1000)
-end
-revert = gg.getResults(1000000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("-9", gg.TYPE_DWORD)
-gg.sleep(700)
-gg.toast('〘❇️〙Гᴏᴛᴏʙᴏ〘❇️〙')
-gg.sleep(300) 
-gg.clearResults()
+gg.alert("⚙️Зайди во внешний вид, и купи второй бампер, а затем нажми на логотип GG!") 
 gg.clearList()
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)
+gg.searchNumber("1", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100)
+gg.alert("⚙️Купи третий бампер, а затем нажми на логотип GG!")
+gg.clearList()
+while true do
+if gg.isVisible() then
+break
+else
+gg.sleep(50)
+end end gg.setVisible(false)
+gg.refineNumber("2", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.alert("⚙️Купи четвёртый бампер, а затем нажми на логотип GG!")
+gg.clearList()
+while true do
+if gg.isVisible() then
+break
+else
+gg.sleep(50)
+end end gg.setVisible(false)
+gg.refineNumber("3", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.getResults(100)
+gg.alert("⚙️Купи первый бампер, а затем нажми на логотип GG!")
+while true do
+if gg.isVisible() then
+break
+else
+gg.sleep(50)
+end end gg.setVisible(false)
+gg.editAll("-1", gg.TYPE_DWORD)
+gg.sleep(300)
+gg.alert("⚙️теперь перелестни машины вверх, и вернтсь обратно на свою!")
 end
 
 function func2func9()
-active = 0
-        local currentTime = os.date("%H:%M:%S")
-        local currentDate = os.date("%A, %d %B %Y")
-        QM = gg.choice({
-            "1 этап🛻",
-            "2 этап📲",
-            "Выход⛔",
-                },nil,"〘⚙️〙━──━❪𝙁𝙇𝘼𝙂 𝙎𝘾𝙍𝙄𝙋𝙏❫━──━〘⚙️〙" .. "\n" .. "🌐Дата: " .. currentDate .. "\n" .. "⌚Время: " .. currentTime .. "\n" .. "💾Разработчик: FLAG ")
-        if QM == 1 then func2func9func1() end
-        if QM == 2 then func2func9func2() end
-        if QM == 3 then HOME() end
-    end
-    
-    function func2func9func1()
+gg.setRanges(gg.REGION_CODE_APP)
+gg.searchNumber("-6268632489401688066;-6268359819120257034;4143010840624362038:17", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.refineNumber("-6268632489401688066;-6268359819120257034:17", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+revert = gg.getResults(300, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("-2999674700105252864;-6268359818359143488", gg.TYPE_QWORD)
+gg.processResume()
 gg.clearResults()
 gg.clearList()
-gg.alert ('Зайди в магазин, и купи приору❇️') 
-for i = 10, 0, -1 do
-gg.toast ("Осталось: " .. i .. " сек")
-gg.sleep(1000)
-end
 gg.setRanges(gg.REGION_ANONYMOUS)
-gg.alert ('❇️теперь зайди во внешний вид и выбери второй бампер(но не покупай)') 
-for i = 10, 0, -1 do
-gg.toast ("Осталось: " .. i .. " сек")
-gg.sleep(1000)
-end
+gg.alert("⚙️Зайди во внешний вид, и купи второй бампер, а затем нажми на логотип GG!") 
+gg.clearList()
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)
 gg.searchNumber("1", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.alert('❇️выбери третий бампер(но не покупай)❇️') 
-for i = 5, 0, -1 do
-gg.toast ("Осталось: " .. i .. " сек")
-gg.sleep(1000)
-end
+gg.getResults(100)
+gg.alert("⚙️Купи третий бампер, а затем нажми на логотип GG!")
+gg.clearList()
+while true do
+if gg.isVisible() then
+break
+else
+gg.sleep(50)
+end end gg.setVisible(false)
 gg.refineNumber("2", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-gg.alert('❇️выбери четвëртый бампер(но не покупай)❇️') 
-for i = 5, 0, -1 do
-gg.toast ("Осталось: " .. i .. " сек")
-gg.sleep(1000)
-end
+gg.alert("⚙️Купи четвёртый бампер, а затем нажми на логотип GG!")
+gg.clearList()
+while true do
+if gg.isVisible() then
+break
+else
+gg.sleep(50)
+end end gg.setVisible(false)
 gg.refineNumber("3", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.getResults(100)
+gg.alert("⚙️Купи первый бампер, а затем нажми на логотип GG!")
+while true do
+if gg.isVisible() then
+break
+else
+gg.sleep(50)
+end end gg.setVisible(false)
 gg.editAll("-1", gg.TYPE_DWORD)
-gg.sleep (300)
-gg.alert ('❇️теперь купи выбранный бампер❇️') 
-for i = 5, 0, -1 do
-gg.toast ("Осталось: " .. i .. " сек")
-gg.sleep(1000)
-end
-gg.alert ('❇️выбери последний задний бампер(но не покупай)❇️') 
-for i = 5, 0, -1 do
-gg.toast ("Осталось: " .. i .. " сек")
-gg.sleep(1000)
-end
-gg.editAll("-1", gg.TYPE_DWORD)
-gg.alert ('❇️теперь купи выбранный бампер❇️') 
-for i = 5, 0, -1 do
-gg.toast ("Осталось: " .. i .. " сек")
-gg.sleep(1000)
-end
-gg.alert ('❇️выйди из внешнего вида, и перелестни на следующую машину,а затем вернись обратно на свою❇️') 
-for i = 5, 0, -1 do
-gg.toast ("Осталось: " .. i .. " сек")
-gg.sleep(1000)
-end
-gg.alert ('Готово, теперь переходи ко второму этапу!🌍')
-gg.clearResults()
-gg.clearList()
-end
-
-function func2func9func2()
-donatik = gg.alert('Привет! для выполнения 2 этапа нужно знать код машины на которую ты хочешь снять бампера.','Коды машин〘📝〙','Приступить〘🟢〙')
-if donatik == 1 then func3func12() end
-if donatik == 2 then func2func9func2func2() end
-end
-
-function func2func9func2func2()
-donatbampera = gg.prompt({"Привет! Для начала введи код машины, на которой хочешь снять бампера!"}, {0}, {"number","number"})
-donatbampera = donatbampera[1]
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber("99;133", gg.TYPE_DWORD) 
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.processResume()
-gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.processResume()
-gg.sleep(1000)
-gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.processResume()
-gg.editAll(donatbampera, gg.TYPE_DWORD)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.processResume()
-gg.refineNumber(donatbampera, gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.processResume()
-gg.sleep(1000)
-gg.refineNumber(donatbampera, gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.processResume()
-gg.sleep (300)
-gg.alert ('🌍теперь зайди в магазин авто и купи машину стоящую на месте приоры, получить машину можно посмотрев рекламу.🛍️')
-gg.clearResults()
-gg.clearList()
+gg.sleep(300)
+gg.alert("⚙️теперь перелестни машины вверх, и вернтсь обратно на свою!")
 end
 
 function func2func8()
