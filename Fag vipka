@@ -1,6 +1,6 @@
 if not gg.isPackageInstalled("com.FlagGG") then 
   gg.setVisible(false)
-  gg.alert("Ошибка №17⚠️")
+  gg.alert("Ошибка №18⚠️")
   os.exit()
 end
 gg.clearResults()
@@ -1821,7 +1821,6 @@ gg.clearList()
 end
 
 function func2func11func23() 
- 
 revert = gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("43", gg.TYPE_DWORD)
 gg.sleep(700)
@@ -1832,7 +1831,6 @@ gg.clearList()
 end
 
 function func2func11func24() 
- 
 revert = gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("44", gg.TYPE_DWORD)
 gg.sleep(700)
@@ -1843,7 +1841,6 @@ gg.clearList()
 end
 
 function func2func11func25() 
- 
 revert = gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("46", gg.TYPE_DWORD)
 gg.sleep(700)
@@ -1854,7 +1851,6 @@ gg.clearList()
 end
 
 function func2func11func26() 
- 
 revert = gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("32", gg.TYPE_DWORD)
 gg.sleep(700)
@@ -1865,7 +1861,6 @@ gg.clearList()
 end
 
 function func2func11func27() 
- 
 revert = gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("35", gg.TYPE_DWORD)
 gg.sleep(700)
@@ -1876,7 +1871,6 @@ gg.clearList()
 end
 
 function func2func11func28()
- 
 mncastom = gg.prompt({"введи номер обвеса"}, {0, false}, {"number"})
 mnccastom = mncastom[1]
 gg.editAll(mnccastom, gg.TYPE_FLOAT)
@@ -2003,6 +1997,7 @@ function func2func8()
             " ╭Быстрая коробка" .. "\n" .. " ╰➤Fast gearbox⏳",
             " ╭1695 hp" .. "\n" .. " ╰➤Обычная настройка🛠️",
             " ╭Кастом лс" .. "\n" .. " ╰➤castom hp⚙️",
+            " ╭Чит тачка" .. "\n" .. " ╰➤Cheat car🕹️",
             " ╭Выход" .. "\n" .. " ╰➤Exit📛",
         },nil,"〘⚙️〙━──━❪𝙁𝙇𝘼𝙂 𝙎𝘾𝙍𝙄𝙋𝙏❫━──━〘⚙️〙" .. "\n" .. "🌐Дата: " .. currentDate .. "\n" .. "⌚Время: " .. currentTime .. "\n" .. "💾Разработчик: FLAG ")
         if QM == 1 then func2func8func1() end
@@ -2012,12 +2007,47 @@ function func2func8()
         if QM == 5 then func2func8func5() end
         if QM == 6 then func2func8func6() end
         if QM == 7 then func2func8func6() end
-        if QM == 8 then HOME() end
+        if QM == 8 then func2func8func7() end
+        if QM == 9 then HOME() end
         end
     
+function func2func8func7()
+gg.alert("🛠️Купи мотор V6.3.5, а затем нажии на логотип GG🛠️")
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)
+gg.clearResults()
+gg.clearList()
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("280", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1233", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("350", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1300", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("6300", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1255", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.searchNumber("4700", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("1233", gg.TYPE_FLOAT)
+gg.processResume()
+gg.alert("Нажми кнопку SET⚙️")
+end
+    
 function func2func8func6()
-gg.alert("🛠️Купи самый первый мотор, у тебя на это 5 секунд🛠️")
-gg.sleep (5000)
+gg.alert("🛠️Купи самый первый мотор, а затем нажми на логотип GG🛠️")
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)
 gg.clearResults()
 gg.clearList()
 local castomhp = gg.prompt({[1]="⚙️Веди желаемое HP (лошадниые силы)", [2]="⚙️Введи желаемый HM (крутящий момент)", [3]="⚙️Введи желаемое значение в скобках справа от HP", [4]="⚙️Введи желаемое значение в скобках справа от HM"}, {[1]="0", [2]="0", [3]="0", [4]="0"})
@@ -2048,8 +2078,12 @@ gg.alert("Нажми кнопку SET⚙️")
 end
     
 function func2func8func6()
-gg.alert("🛠️Купи мотор V6.3.5🛠️")
-gg.sleep (7000)
+gg.alert("🛠️Купи мотор V6.3.5, а затем нажми на логотип GG🛠️")
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)
 gg.clearResults()
 gg.clearList()
 gg.setRanges(gg.REGION_ANONYMOUS)
@@ -2074,8 +2108,12 @@ gg.alert("Нажми кнопку SET⚙️")
 end
     
 function func2func8func1()
-gg.alert("🛠️Купи мотор V6.3.5🛠️")
-gg.sleep (7000)
+gg.alert("🛠️Купи мотор V6.3.5, а затем нажми на логотип GG🛠️")
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)
 gg.clearResults()
 gg.clearList()
 gg.setRanges(gg.REGION_ANONYMOUS)
@@ -2100,8 +2138,12 @@ gg.alert("Нажми кнопку SET⚙️")
 end
 
 function func2func8func2()
-gg.alert("🛠️Купи мотор V6.3.5🛠️")
-gg.sleep (7000)
+gg.alert("🛠️Купи мотор V6.3.5, а затем нажми на логотип GG🛠️")
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)
 gg.clearResults()
 gg.clearList()
 gg.setRanges(gg.REGION_ANONYMOUS)
@@ -2126,8 +2168,12 @@ gg.alert("Нажми кнопку SET⚙️")
 end
 
 function func2func8func3()
-gg.alert("🛠️Купи мотор V6.3.5, потом зайди в другое и купи TWIN TURBO🏁")
-gg.sleep (7000)
+gg.alert("🛠️Купи мотор V6.3.5, потом зайди в другое и купи TWIN TURBO, а затем нажми на логотип GG🏁")
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)
 gg.clearResults()
 gg.clearList()
 gg.setRanges(gg.REGION_ANONYMOUS)
@@ -2152,8 +2198,12 @@ gg.alert("Нажми кнопку SET⚙️")
 end
 
 function func2func8func4()
-gg.alert("🛠️Купи мотор V6.3.0🛠️")
-gg.sleep (7000)
+gg.alert("🛠️Купи мотор V6.3.0, а затем нажми на логотип GG🛠️")
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)
 gg.clearResults()
 gg.clearList()
 gg.setRanges(gg.REGION_ANONYMOUS)
@@ -2180,8 +2230,12 @@ end
 function func2func8func5()
 gg.clearResults()
 gg.clearList()
-gg.alert("🛠️Купи fast gearboks в тюнинге машины, у тебя на это есть пару секунд🛠️") 
-gg.sleep(7000)
+gg.alert("🛠️Купи fast gearboks в тюнинге машины, а затем нажми на значёк GG🛠️") 
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)
 gg.clearResults()
 gg.setRanges(gg.REGION_CODE_APP)
 gg.searchNumber("0.1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -2197,8 +2251,12 @@ end
 function func2func8func6() 
 gg.clearResults()
 gg.clearList()
-gg.alert("🛠️Купи мотор V6.3.0🛠️")
-gg.sleep (7000)
+gg.alert("🛠️Купи мотор V6.3.0, а затем нажми на логотип GG🛠️")
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)
 gg.setRanges(gg.REGION_CODE_APP)
 gg.searchNumber("240", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
@@ -2229,8 +2287,12 @@ end
 function func2func7()
 gg.clearResults()
 gg.clearList()
-gg.alert("〘🌊〙Для начала купи fast gearboks в тюнинге машины, у тебя на это есть пару секунд〘🌊〙") 
-gg.sleep(7000)
+gg.alert("〘🌊〙Для начала купи fast gearboks в тюнинге машины, а затем нажми на логотип gg〘🌊〙") 
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)
 gg.clearResults()
 gg.setRanges(gg.REGION_CODE_APP)
 gg.searchNumber("0.1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
@@ -2889,6 +2951,13 @@ function color(code)
 end
 
 function func1func6()
+gg.clearResults()
+gg.clearList()
+gg.setRanges(16384)
+gg.searchNumber("-0.00005", 16)
+gg.getResults(100)
+gg.editAll("999.9", 16)
+gg.processResume()
 gg.clearResults()
 gg.clearList()
 	local Lib = gg.getRangesList("libil2cpp.so")
