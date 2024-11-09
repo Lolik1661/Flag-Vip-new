@@ -156,7 +156,7 @@ EM = gg.choice({
 " ╭Хром фары" .. "\n" .. " ╰➤Chrome headlights☄️",
 " ╭Хром суппорта" .. "\n" .. " ╰➤Chrome caliper🌙",
 " ╭Хром световой обвес" .. "\n" .. " ╰➤Chrome light body kit☀️",
-" ╭Выдать игроку 1ккк" .. "\n" .. " ╰➤Give the player 1kkк🕹️",
+" ╭Выдать игроку 1кк" .. "\n" .. " ╰➤Give the player 1kk🕹️",
 " ╭Назад" .. "\n" .. " ╰➤BACK📛",
 },nil,"〘⚙️〙━──━❪𝙁𝙇𝘼𝙂 𝙎𝘾𝙍𝙄𝙋𝙏❫━──━〘⚙️〙" .. "\n" .. "🌐Дата: " .. currentDate .. "\n" .. "⌚Время: " .. currentTime .. "\n" .. "💾Разработчик: FLAG ")
 if EM == 1 then func2func0() end
@@ -2092,7 +2092,7 @@ gg.processResume()
 gg.alert("Нажми кнопку SET⚙️")
 end
     
-function func2func8func6()
+function func2func8func5()
 gg.alert("🛠️Купи мотор V6.3.5, а затем нажми на логотип GG🛠️")
 while true do
 if gg.isVisible() then
@@ -2724,39 +2724,46 @@ end
 function func2func4()
 gg.clearResults()
 gg.clearList()
-smoke = gg.alert('Привет! вот краткая инструкция как пользоваться этой функцией! ' .. "\n" .. 'Для начала тебе нужно узнать код той машины, которую хочешь получить бесплатно. Для этого нажми на кнопку ниже. Далее эта функция потребует вписать код желаемой машины, что ты и должен сделать. после загрузки машина, которую ты хотел появиться на месте смарта (первой машины).','Коды машин〘📝〙','Приступить〘🟢〙')
-if smoke == 1 then func3func12() end
-if smoke == 2 then func2func4func1() end
+gg.alert ('Зайди в магазин авто, и выбери вторую машину, а затем нажии на логотип GG!⚙️')
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)
+gg.searchNumber("59;133", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.refineNumber("59", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("59", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("59", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("59", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+migi = gg.alert('⚙️Привет! Сейчас тебя попросят ввести код машины, которую ты хочешь получить. Если код авто тебе не известен, то нажми га копку "коды машин"🛠️','Коды машин📝','Приступить🌐')
+if migi == 1 then func3func12() end
+if migi == 2 then func2func4func1() end
 end
 
 function func2func4func1()
-gg.clearResults()
-gg.clearList()
-cartina = gg.prompt({"Привет! Для начала введи код желаемой машины!"}, {0}, {"number","number"})
-cartina = cartina[1]
-gg.setRanges(gg.REGION_ANONYMOUS)
-gg.searchNumber('59;133', gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+carrr = gg.prompt({"🌐Введи код машины которую хочешь получить!⚙️"}, {0}, {"number","number"})
+carrr = carrr[1]
 revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll(carrr, gg.TYPE_DWORD)
 gg.processResume()
-gg.refineNumber("59", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.sleep (1000)
+gg.refineNumber("carrr", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
-gg.sleep(1000)
-gg.refineNumber("59", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.sleep (1000)
+gg.refineNumber("carrr", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
-revert = gg.getResults(1000, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll(cartina, gg.TYPE_DWORD)
+gg.sleep (1000)
+gg.refineNumber("carrr", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
-gg.refineNumber(cartina, gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.processResume()
-gg.sleep(1000)
-gg.refineNumber(cartina, gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
-revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.processResume()
-gg.sleep (300)
-gg.alert('⚙️Готово! Теперь зацди в магазин, и купи машину стоящую на месте смарта! (первой машины)')
+gg.alert ('🌐Перелестни машину на смарт, на её месте появится машина, код которой ты вбил ранее. если машина донатная, получи ее посмотрев рекламу.⚙️')
 gg.clearResults()
 gg.clearList()
 end
@@ -2804,34 +2811,36 @@ gg.clearResults()
 gg.clearList()
 end
 
-function func2func2()
- 
-MMM = gg.choice({
-"НЛО〘🛸〙",
-"Поднять машину〘✈️〙",
-"〘🛑〙НАЗАД〘🛑〙",
-},nil,"🗼━──━❪𝙁𝙇𝘼𝙂 𝙎𝘾𝙍𝙋𝙏❫━──━🗼")
-if MMM == 1 then func2func2func1() end
-if MMM == 2 then func2func2func2() end
-if MMM == 3 then HOME() end
-end
-
+        function func2func2()
+        active = 0
+        local currentTime = os.date("%H:%M:%S")
+        local currentDate = os.date("%A, %d %B %Y")
+        MMM = gg.choice({
+            " ╭Сделать НЛО" .. "\n" .. " ╰➤Made NLO〘🛸〙",
+            " ╭Поднять машину" .. "\n" .. " ╰➤App Car〘🚀〙",
+            " ╭Назад" .. "\n" .. " ╰➤Exit〘📛〙",
+        },nil,"〘⚙️〙━──━❪𝙁𝙇𝘼𝙂 𝙎𝘾𝙍𝙄𝙋𝙏❫━──━〘⚙️〙" .. "\n" .. "🌐Дата: " .. currentDate .. "\n" .. "⌚Время: " .. currentTime .. "\n" .. "💾Разработчик: FLAG ")
+        if MMM == 1 then func2func2func1() end
+        if MMM == 2 then func2func2func2() end
+        if MMM == 3 then HOME() end
+    end
 
 function func2func2func1()
-gg.clearResults()
 gg.clearList()
- 
 gg.clearResults()
-gg.sleep(700)
-gg.alert('〘❇️〙Для начала зайдите в настройки подвески и прибавьте все ползунки на максимум, у вас на это есть пару секунд〘❇️〙')
-gg.sleep(10000)
+gg.alert('⚙️Для начала зайдите в настройки подвески и прибавьте ползунки наклона колёс на максимум, а затем нажии на логотип gg🌐')
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)
 gg.setRanges(gg.REGION_ANONYMOUS)
 gg.processResume()
 gg.searchNumber("-10", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.processResume()
 revert = gg.getResults(1000000, nil, nil, nil, nil, nil, nil, nil, nil)
 gg.editAll("-99", gg.TYPE_FLOAT)
-gg.alert('〘❇️〙Теперь опять зайдите в настройки подвески и нажмите готово〘❇️〙')
+gg.alert('⚙️Теперь опять зайдите в настройки подвески и нажмите готово🌐')
 gg.clearResults()
 gg.clearList()
 end
@@ -2844,7 +2853,7 @@ gg.searchNumber("0.34", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1, 0)
 gg.getResults(1000000)
 gg.editAll("2", gg.TYPE_FLOAT)
 gg.sleep(300)
-gg.alert("〘🫐〙перейди на любую другую машину и по желанию вернись обратно на свою〘🫐〙") 
+gg.alert("⚙️перейди на любую другую машину и по желанию вернись обратно на свою🌐") 
 gg.clearResults()
 gg.clearList()
 end
@@ -3171,12 +3180,12 @@ function func2func20()
         local currentTime = os.date("%H:%M:%S")
         local currentDate = os.date("%A, %d %B %Y")
         DFG = gg.choice({
-            " ➤ ламба авентадор✈️",
-            " ➤ ламба урус🚁",
-            " ➤ ламба галлардо☠️",
-            " ➤ламба SVJ🪃",
-            " ➤ламба хуракан🚀 ",
-            " ➤ламба венто🪢",
+            " ➤ ламба авентадор✈️",--
+            " ➤ ламба урус🚁",--
+            " ➤ ламба галлардо☠️", --
+            " ➤ламба SVJ🪃", --
+            " ➤ламба хуракан🚀 ",--
+            " ➤ламба венено🪢",--
             " ➤exit📛",
                 },nil,"〘⚙️〙━──━❪𝙁𝙇𝘼𝙂 𝙎𝘾𝙍𝙄𝙋𝙏❫━──━〘⚙️〙" .. "\n" .. "🌐Дата: " .. currentDate .. "\n" .. "⌚Время: " .. currentTime .. "\n" .. "💾Разработчик: FLAG ")
         if DFG == 1 then func2func20func1() end
@@ -3188,74 +3197,179 @@ function func2func20()
         if DFG == 7 then HOME() end
     end
     
-    function func2func20func6()
-    gg.clearResults()
+function func2func20func6() --
+gg.alert ('Зайди в магазин авто, и выбери вторую машину, а затем нажии на логотип GG!⚙️')
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)  
+gg.clearResults()
 gg.clearList()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.searchNumber("134", gg.TYPE_DWORD) 
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("99;133", gg.TYPE_DWORD) 
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
 revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("68", gg.TYPE_DWORD)
-gg.alert("Долистай до 89 машины и купи ее🌴 ")
+gg.editAll("44", gg.TYPE_DWORD)
+gg.alert("Долистай до приоры и купи ее!⚙️")
 gg.clearResults()
 gg.clearList()
 end
     
-    function func2func20func1()
-    gg.clearResults()
+function func2func20func1() --
+gg.clearResults()
 gg.clearList()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.searchNumber("134", gg.TYPE_DWORD) 
+gg.alert ('Зайди в магазин авто, и выбери вторую машину, а затем нажии на логотип GG!⚙️')
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("99;133", gg.TYPE_DWORD) 
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
 revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("66", gg.TYPE_DWORD)
-gg.alert("Долистай до 89 машины и купи ее🌴 ")
+gg.editAll("42", gg.TYPE_DWORD)
+gg.alert("Долистай до приоры и купи ее!⚙️")
 gg.clearResults()
 gg.clearList()
 end
 
-function func2func20func2()
+function func2func20func2() --
 gg.clearResults()
 gg.clearList()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.searchNumber("134", gg.TYPE_DWORD) 
+gg.alert ('Зайди в магазин авто, и выбери вторую машину, а затем нажии на логотип GG!⚙️')
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("99;133", gg.TYPE_DWORD) 
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
 revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("293", gg.TYPE_DWORD)
-gg.alert("Долистай до 89 машины и купи ее🌴 ")
+gg.editAll("125", gg.TYPE_DWORD)
+gg.alert("Долистай до приоры и купи ее!⚙️")
 gg.clearResults()
 gg.clearList()
 end
 
-function func2func20func3()
+function func2func20func3() --
 gg.clearResults()
 gg.clearList()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.searchNumber("134", gg.TYPE_DWORD) 
+gg.alert ('Зайди в магазин авто, и выбери вторую машину, а затем нажии на логотип GG!⚙️')
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("99;133", gg.TYPE_DWORD) 
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
 revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("101", gg.TYPE_DWORD)
-gg.alert("Долистай до 89 машины и купи ее🌴 ")
+gg.editAll("65", gg.TYPE_DWORD)
+gg.alert("Долистай до приоры и купи ее!⚙️")
 gg.clearResults()
 gg.clearList()
 end
 
-function func2func20func4()
+function func2func20func4() --
 gg.clearResults()
 gg.clearList()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.searchNumber("134", gg.TYPE_DWORD) 
+gg.alert ('Зайди в магазин авто, и выбери вторую машину, а затем нажии на логотип GG!⚙️')
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("99;133", gg.TYPE_DWORD) 
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
 revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("345", gg.TYPE_DWORD)
-gg.alert("Долистай до 89 машины и купи ее🌴 ")
+gg.editAll("159", gg.TYPE_DWORD)
+gg.alert("Долистай до приоры и купи ее!⚙️")
 gg.clearResults()
 gg.clearList()
 end
 
-function func2func20func5()
+function func2func20func5()--
 gg.clearResults()
 gg.clearList()
-gg.setRanges(gg.REGION_CODE_APP)
-gg.searchNumber("134", gg.TYPE_DWORD) 
+gg.alert ('Зайди в магазин авто, и выбери вторую машину, а затем нажии на логотип GG!⚙️')
+while true do
+if gg.isVisible() then
+break
+else
+end end gg.setVisible(false)
+gg.setRanges(gg.REGION_ANONYMOUS)
+gg.searchNumber("99;133", gg.TYPE_DWORD) 
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
+gg.sleep (1000)
+gg.refineNumber("99", gg.TYPE_DWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+gg.processResume()
 revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
-gg.editAll("68", gg.TYPE_DWORD)
-gg.alert("Долистай до 25 машины и купи ее🌴 ")
+gg.editAll("18", gg.TYPE_DWORD)
+gg.alert("Долистай до приоры и купи ее!⚙️")
 gg.clearResults()
 gg.clearList()
 end
